@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "name": "Mercurial Vapor 16 Pro",
+    "price": 180.00,
+    "category": "boots",
+    "description": "Engineered for pure speed, featuring an optimized three-quarter length Zoom Air unit and an aerodynamic sticky mesh finish for brilliant control.",
+    "image": "@/src/assets/images/mercurialvapour16.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Predator Elite FG",
+    "price": 250.00,
+    "category": "boots",
+    "description": "Striking accuracy built with dynamic HybridTouch 2.0 and strategically mapped Strikeskin rubber fins for pristine ball manipulation.",
+    "image": "@/src/assets/images/predatorelite.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Future Ultimate FG",
+    "price": 220.00,
+    "category": "boots",
+    "description": "Adaptive FuzionFit360 upper combined with dual-mesh and PWRTAPE support for absolute creative stability during agility drills.",
+    "image": "@/src/assets/images/pumafuture.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Copa Pure 2 Elite",
+    "price": 230.00,
+    "category": "boots",
+    "description": "Flawless touch engineered with ultra-premium Fusionskin leather details and an engineered lightweight outsole for classic comfort.",
+    "image": "@/src/assets/images/adidascopapure2.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Phantom GX II Pro",
+    "price": 160.00,
+    "category": "boots",
+    "description": "Revolutionary Gripknit mesh overlays optimize precision striking and offer premium dampening capabilities in wet or dry pitch conditions.",
+    "image": "@/src/assets/images/nikephantomGX.jpg"
+  },
+  {
+    "id": 6,
+    "name": "King Ultimate FG",
+    "price": 200.00,
+    "category": "boots",
+    "description": "Crafted with K-Better synthetic upper material, outperforming genuine leather in durability, soft touch, and weight reduction metrics.",
+    "image": "@/src/assets/images/pumakingultimateFG.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tiempo Legend 10 Elite",
+    "price": 240.00,
+    "category": "boots",
+    "description": "Features FlyTouch Plus engineered leather that molds perfectly to your foot for consistent command across midfield tempos.",
+    "image": "@/src/assets/images/niketiempo10elite.jpg"
+  },
+  {
+    "id": 8,
+    "name": "X Crazyfast Injection",
+    "price": 260.00,
+    "category": "boots",
+    "description": "Ultralight Aeropacity Speedskin mesh upper paired with an Aeroplate structural system for explosive multi-directional traction.",
+    "image": "@/src/assets/images/adidasxcrazyfast.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Morelia Neo IV Beta",
+    "price": 300.00,
+    "category": "boots",
+    "description": "Elite Japanese engineering featuring premium washables, fine kangaroo leather, and an incredibly flexible barefoot feel architecture.",
+    "image": "@/src/assets/images/mizunomoreilaneo.jpg"
+  },
+  {
+    "id": 10,
+    "name": "F50 Elite Fast Reborn",
+    "price": 260.00,
+    "category": "boots",
+    "description": "The return of a speed icon, sporting a Fibertouch upper and Sprintweb textures for ultimate control at high acceleration rates.",
+    "image": "@/src/assets/images/adidasf50.jpg"
+  },
+  { 
+    "id": 11,
+    "name": "Arsenal Home Jersey 26/27",
+    "price": 95.00,
+    "category": "jerseys",
+    "description": "Official Gunners home colorway featuring moisture-wicking technology and premium embroidered club crest details.",
+    "image": "@/src/assets/images/arsenal2526.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Real Madrid Home Jersey 26/27",
+    "price": 100.00,
+    "category": "jerseys",
+    "description": "Classic white design with subtle houndstooth patterns celebrating historic architectural roots in Madrid.",
+    "image": "@/src/assets/images/madrid2627.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Manchester City Home Jersey",
+    "price": 95.00,
+    "category": "jerseys",
+    "description": "Iconic sky-blue variant featuring structured mesh ventilation inserts built directly into high-heat zones.",
+    "image": "@/src/assets/images/mancity2627.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Barcelona Home Jersey 26/27",
+    "price": 100.00,
+    "category": "jerseys",
+    "description": "Traditional Blaugrana vertical stripe design layout optimized with lightweight sustainable yarn fabrics.",
+    "image": "@/src/assets/images/barcelona2627.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Liverpool Home Jersey 26/27",
+    "price": 95.00,
+    "category": "jerseys",
+    "description": "Vibrant chrome red silhouette paired with contrasting retro collar linings reminiscent of Anfield European nights.",
+    "image": "@/src/assets/images/liverpool2627.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Bayern Munich Home Jersey",
+    "price": 90.00,
+    "category": "jerseys",
+    "description": "Bold triple-red graphic detailing reflecting German Bundesliga stadium dominance, engineered with cooling tech.",
+    "image": "@/src/assets/images/bayern2627.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Inter Milan Home Jersey 26/27",
+    "price": 95.00,
+    "category": "jerseys",
+    "description": "Striking snakeskin abstract vertical stripe elements honoring Milanese regional heritage and pride.",
+    "image": "@/src/assets/images/interhome.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Juventus Home Jersey 26/27",
+    "price": 95.00,
+    "category": "jerseys",
+    "description": "High-contrast structural black and white vertical bars constructed with dynamic knit textures for premium comfort.",
+    "image": "@/src/assets/images/juventushome.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Paris Saint-Germain Home Jersey",
+    "price": 100.00,
+    "category": "jerseys",
+    "description": "Ligue 1 showcase featuring a brushed artistic Hechter center stripe on deep midnight navy mesh bases.",
+    "image": "@/src/assets/images/psghome.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Borussia Dortmund Home Jersey",
+    "price": 90.00,
+    "category": "jerseys",
+    "description": "Classic cyber yellow and black detailing offering a light fit profile for intense training or active supporter display.",
+    "image": "@/src/assets/images/borrusiadortmundhome.jpg"
+  }
+
+]
