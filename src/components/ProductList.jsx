@@ -42,3 +42,31 @@ function ProductsList() {
       </div>
     );
   }
+
+  if (error) {
+    return (
+      <div className="mx-auto max-w-md my-12 p-6 border border-red-200 bg-red-50 rounded-xl text-center">
+        <h2 className="text-lg font-bold text-red-700">Fixture Postponed</h2>
+        <p className="text-sm text-red-600 mt-1">{error}</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className='bg-zinc-50 min-h-screen flex flex-col justify-between'>
+        <div className='container mx-auto px-4 py-8 max-w-7xl flex-1'>
+            <div className='mb-8 text-center sm:text-left'>
+                <h2 className="text-3xl font-black tracking-tight text-zinc-900 uppercase">
+                    Matchday <span className="text-emerald-600">Gear</span>
+                </h2>
+
+                <p className="text-zinc-500 text-sm mt-1">
+                    Browse our premium collection of authentic football jerseys and boots.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+  )
