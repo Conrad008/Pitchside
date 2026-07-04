@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer } from 'react';
 
+// 1. Define the initial state and an initializer function for lazy loading
 const initialState = {
   user: null,
 };
@@ -20,6 +21,7 @@ const initializer = (initial) => {
   return initial;
 };
 
+// 2. Define the reducer function
 const authReducer = (state, action) => {
   switch (action.type) {
     case 'LOGIN':
@@ -70,7 +72,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user: state.user, isAuthenticated, login, register, logout }}>
+    <AuthContext.Provider value={{ user: state.user, isAdmin, isAuthenticated, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );
