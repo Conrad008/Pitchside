@@ -30,3 +30,15 @@ function ProductsList() {
         setLoading(false);
       });
   }, []);
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-4">
+        <div className="h-12 w-12 rounded-full border-4 border-emerald-100 border-t-emerald-600 animate-spin" />
+        <h2 className="text-xl font-semibold text-emerald-800 animate-pulse">Lacing up boots, please wait...</h2>
+      </div>
+    );
+  }
