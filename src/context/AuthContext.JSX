@@ -1,0 +1,86 @@
+import { createContext, useContext, useReducer } from 'react';
+
+const initialState = {
+  user: null,
+};
+
+const initializer = (initial) => {
+  try {
+    const storedUser = localStorage.getItem('auth_user');
+    const storedToken = localStorage.getItem('auth_token');
+
+    if (storedUser && storedToken) {
+      return { user: JSON.parse(storedUser) };
+    }
+  } catch (error) {
+    console.error("Failed to parse initialized auth session:", error);
+    localStorage.removeItem('auth_user');
+    localStorage.removeItem('auth_token');
+  }
+  return initial;
+};
+
+const authReducer = (state, action) => {
+  switch (action.type) {
+    case 'LOGIN':
+    case 'REGISTER':
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case 'LOGOUT':
+      return {
+        ...state,
+        user: null,
+      };
+    default:
+      return state;
+  }
+};
+
+const AuthContext = createContext(undefined);
+
+export const AuthProvider = ({ children }) => {
+  // 3. Initialize useReducer with the initializer function
+  const [state, dispatch] = useReducer(authReducer, initialState, initializer);
+
+  // Helper selectors
+  const isAuthenticated = !!state.user;
+  const isAdmin = state.user?.role === 'admin';
+
+  // Handle Login
+  const login = (token, userData) => {
+    localStorage.setItem('auth_token', token);
+    localStorage.setItem('auth_user', JSON.stringify(userData));
+    dispatch({ type: 'LOGIN', payload: userData });
+  };
+
+  // Handle Registration
+  const register = (token, userData) => {
+    localStorage.setItem('auth_token', token);
+    localStorage.setItem('auth_user', JSON.stringify(userData));
+    dispatch({ type: 'REGISTER', payload: userData });
+  };
+
+  // Handle Logout
+  const logout = () => {
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('auth_user');
+    dispatch({ type: 'LOGOUT' });
+  };
+
+  return (
+    <AuthContext.Provider value={{ user: state.user, isAuthenticated, login, register, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
+
