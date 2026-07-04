@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProductsSearch from './productsSearch';
 import ProductCard from './productCard';
 
@@ -66,7 +66,19 @@ function ProductsList() {
 
             </div>
 
+            <div className='mb-6 bg-white p-4 rounded-xl border border-zinc-200 shadow-sm'>
+                <ProductsSearch onSearch={handleSearch} />
+                <p className="text-xs text-zinc-500 mt-3 flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                    Showing results for:{' '}
+                    <strong className="text-zinc-800 font-semibold">
+                        {searchTerm ? `"${searchTerm}"` : 'all items'}
+                    </strong>
+                </p>
+            </div>
+
         </div>
 
     </div>
   )
+} 
