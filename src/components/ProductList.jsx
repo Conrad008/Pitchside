@@ -77,6 +77,27 @@ function ProductsList() {
                 </p>
             </div>
 
+            {filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {filteredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                category={product.category}
+                description={product.description}
+                image={product.image}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16 bg-white rounded-xl border border-zinc-200 max-w-lg mx-auto mt-8">
+            <p className="text-zinc-400 font-medium">No jerseys or boots found matching "{searchTerm}"</p>
+            <p className="text-xs text-zinc-400 mt-1">Double check your spelling or try another pitch search phrase.</p>
+          </div>
+        )}
+
         </div>
 
     </div>
