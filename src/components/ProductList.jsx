@@ -103,3 +103,4 @@ function ProductsList() {
     </div>
   )
 } 
+export default ProductsList
