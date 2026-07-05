@@ -43,10 +43,10 @@ export const Login = () => {
     <div className="flex min-h-[85vh] items-center justify-center bg-zinc-50 p-4 sm:p-6 lg:p-8">
       <Card className="w-full max-w-md border-zinc-200 bg-white shadow-xl shadow-zinc-200/50">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-black tracking-tight text-center text-zinc-100 uppercase">
+          <CardTitle className="text-2xl font-black tracking-tight text-center text-zinc-900 uppercase">
             Welcome back <span className="text-emerald-500">.</span>
           </CardTitle>
-          <CardDescription className="text-center text-zinc-400">
+          <CardDescription className="text-center text-zinc-500">
             Enter your credentials to access your pitchside account
           </CardDescription>
         </CardHeader>
@@ -121,7 +121,7 @@ export const Login = () => {
               )}
             </Button>
             
-            <p className="text-sm text-center text-zinc-400 w-full">
+            <p className="text-sm text-center text-zinc-500 w-full">
               Don&apos;t have an account?{' '}
               <a href="#register" className="font-semibold text-emerald-500 hover:text-emerald-400 hover:underline transition-colors">
                 Sign up
