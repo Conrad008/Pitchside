@@ -55,15 +55,15 @@ export default function Checkout() {
     return (
       <div className="container max-w-md mx-auto text-center py-12 space-y-4">
         <p className="text-muted-foreground">Your cart is empty. Cannot checkout.</p>
-        <Button onClick={() => navigate('/')}>Go to Catalog</Button>
+        <Button onClick={() => navigate('/products')}>Go to Catalog</Button>
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto p-6 max-w-4xl grid md:grid-cols-2 gap-6">
+    <div className="container mx-auto p-6 max-w-4xl grid md:grid-cols-2 gap-6 dark:bg-zinc-900 dark:text-zinc-50">
       {/* Left Column: Shipping & Payment Options Form */}
-      <form onSubmit={handlePlaceOrder} className="space-y-6">
+      <form onSubmit={handlePlaceOrder} className="space-y-6 dark:bg-zinc-900 dark:text-zinc-50">
         {/* Shipping Card */}
         <Card>
           <CardHeader>
@@ -71,15 +71,15 @@ export default function Checkout() {
             <CardDescription>Enter your delivery information below.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="space-y-1">
+            <div className="space-y-1 dark:bg-zinc-900 dark:text-zinc-50">
               <label className="text-xs font-medium">Full Name</label>
               <Input name="name" required value={formData.name} onChange={handleInputChange} placeholder="John Doe" />
             </div>
-            <div className="space-y-1">
+            <div className="space-y-1 dark:bg-zinc-900 dark:text-zinc-50">
               <label className="text-xs font-medium">Email Address</label>
               <Input type="email" name="email" required value={formData.email} onChange={handleInputChange} placeholder="john@example.com" />
             </div>
-            <div className="space-y-1">
+            <div className="space-y-1 dark:bg-zinc-900 dark:text-zinc-50">
               <label className="text-xs font-medium">Delivery Address</label>
               <Input name="address" required value={formData.address} onChange={handleInputChange} placeholder="123 Market St, Nairobi" />
             </div>
@@ -87,18 +87,17 @@ export default function Checkout() {
         </Card>
 
         {/* Payment Methods Selection Card */}
-        <Card>
+        <Card className={"dark:bg-zinc-900 dark:text-zinc-50"}>
           <CardHeader>
             <CardTitle>Payment Method</CardTitle>
             <CardDescription>Select your preferred mode of payment.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {/* Payment Method Selector Grid */}
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 gap-2 dark:bg-zinc-900 dark:text-zinc-50">
               <Button
                 type="button"
                 variant={paymentMethod === 'mpesa' ? 'default' : 'outline'}
-                className="flex flex-col h-16 items-center justify-center gap-1 text-xs"
+                className="flex flex-col h-16 items-center justify-center gap-1 text-xs dark:bg-zinc-900 dark:text-zinc-50"
                 onClick={() => setPaymentMethod('mpesa')}
               >
                 <Wallet className="h-4 w-4" />
@@ -108,7 +107,7 @@ export default function Checkout() {
               <Button
                 type="button"
                 variant={paymentMethod === 'card' ? 'default' : 'outline'}
-                className="flex flex-col h-16 items-center justify-center gap-1 text-xs"
+                className="flex flex-col h-16 items-center justify-center gap-1 text-xs dark:bg-zinc-900 dark:text-zinc-50"
                 onClick={() => setPaymentMethod('card')}
               >
                 <CreditCard className="h-4 w-4" />
@@ -118,7 +117,7 @@ export default function Checkout() {
               <Button
                 type="button"
                 variant={paymentMethod === 'cod' ? 'default' : 'outline'}
-                className="flex flex-col h-16 items-center justify-center gap-1 text-xs"
+                className="flex flex-col h-16 items-center justify-center gap-1 text-xsdark:bg-zinc-900 dark:text-zinc-50"
                 onClick={() => setPaymentMethod('cod')}
               >
                 <Truck className="h-4 w-4" />
@@ -126,9 +125,8 @@ export default function Checkout() {
               </Button>
             </div>
 
-            {/* Conditional Sub-forms depending on the active selection */}
             {paymentMethod === 'mpesa' && (
-              <div className="space-y-1 p-3 border rounded-lg bg-muted/30 animate-in fade-in duration-200">
+              <div className="space-y-1 p-3 border rounded-lg bg-muted/30 animate-in fade-in duration-200 dark:bg-zinc-900 dark:text-zinc-50">
                 <label className="text-xs font-medium">M-Pesa Phone Number</label>
                 <Input 
                   type="tel" 
@@ -141,26 +139,26 @@ export default function Checkout() {
             )}
 
             {paymentMethod === 'card' && (
-              <div className="space-y-3 p-3 border rounded-lg bg-muted/30 animate-in fade-in duration-200">
+              <div className="space-y-3 p-3 border rounded-lg bg-muted/30 animate-in fade-in duration-200 dark:bg-zinc-900 dark:text-zinc-50">
                 <div className="space-y-1">
-                  <label className="text-xs font-medium">Card Number</label>
+                  <label className="text-xs font-medium dark:bg-zinc-900 dark:text-zinc-50">Card Number</label>
                   <Input 
                     placeholder="1234 5678 1234 5678"
                     value={cardDetails.number}
                     onChange={(e) => setCardDetails({...cardDetails, number: e.target.value})}
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2 dark:bg-zinc-900 dark:text-zinc-50">
                   <div className="space-y-1">
-                    <label className="text-xs font-medium">Expiry</label>
+                    <label className="text-xs font-medium dark:bg-zinc-900 dark:text-zinc-50">Expiry</label>
                     <Input 
                       placeholder="MM/YY"
                       value={cardDetails.expiry}
                       onChange={(e) => setCardDetails({...cardDetails, expiry: e.target.value})}
                     />
                   </div>
-                  <div className="space-y-1">
-                    <label className="text-xs font-medium">CVC</label>
+                  <div className="space-y-1 dark:bg-zinc-900 dark:text-zinc-50">
+                    <label className="text-xs font-medium dark:bg-zinc-900 dark:text-zinc-50">CVC</label>
                     <Input 
                       placeholder="123"
                       value={cardDetails.cvc}

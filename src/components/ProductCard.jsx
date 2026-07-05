@@ -23,13 +23,13 @@ function ProductCard({id, name, price, description, category, image}) {
     };
 
     return (
-    <Card className="group overflow-hidden border border-zinc-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between rounded-xl">
+    <Card className="group overflow-hidden border border-zinc-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between rounded-xl dark:bg-zinc-900 dark:text-zinc-50">
         <div className="relative overflow-hidden bg-zinc-100 aspect-square flex items-center justify-center">
             <Link to={`/products/${id}`} className="w-full h-full block">
               <img
               src={image}
               alt={name}
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 "
               loading="lazy"
               />
             </Link>
@@ -42,7 +42,7 @@ function ProductCard({id, name, price, description, category, image}) {
         <div>
             <CardHeader className="p-4 pb-2">
                 <Link to={`/products/${id}`} className="hover:text-emerald-600 transition-colors block">
-                    <CardTitle className="text-base font-bold text-zinc-800 line-clamp-1">
+                    <CardTitle className="text-base font-bold text-zinc-800 line-clamp-1 dark:text-zinc-50">
                       {name}
                     </CardTitle>
                 </Link>
@@ -55,7 +55,7 @@ function ProductCard({id, name, price, description, category, image}) {
                 
                 <div className="flex items-center justify-between pt-2 border-t border-zinc-100">
                     <div className="flex flex-col">
-                        <span className="text-[10px] uppercase tracking-wider font-semibold text-zinc-400">Price</span>
+                        <span className="text-[10px] uppercase tracking-wider font-semibold text-zinc-400 dark:text-zinc-50">Price</span>
                         <span className="text-base font-black text-emerald-700">
                             Ksh. {price.toLocaleString()}
                         </span>

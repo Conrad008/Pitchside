@@ -4,9 +4,9 @@ import { Button } from '@base-ui/react';
 import { LogOut, ShoppingCart, Sun, Moon, User } from 'lucide-react'
 import { ThemeContext } from '@/context/ThemeContext';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { CartContext } from './context/CartContext';
-import { useAuth } from './context/AuthContext';
-import Cart from './cart';
+import { CartContext } from '@/context/CartContext';
+import { useAuth } from '@/context/AuthContext';
+import Cart from '@/components/Cart';
 
 export default function Navbar() {
   const { cart } = useContext(CartContext);

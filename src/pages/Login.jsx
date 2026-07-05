@@ -40,10 +40,10 @@ export const Login = () => {
   };
 
   return (
-    <div className="flex min-h-[85vh] items-center justify-center bg-zinc-50 p-4 sm:p-6 lg:p-8">
+    <div className="flex min-h-[85vh] items-center justify-center bg-zinc-50 p-4 sm:p-6 lg:p-8 dark:bg-zinc-900 dark:text-zinc-100">
       <Card className="w-full max-w-md border-zinc-200 bg-white shadow-xl shadow-zinc-200/50">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-black tracking-tight text-center text-zinc-900 uppercase">
+          <CardTitle className="text-2xl font-black tracking-tight text-center text-zinc-900 uppercase dark:text-zinc-900">
             Welcome back <span className="text-emerald-500">.</span>
           </CardTitle>
           <CardDescription className="text-center text-zinc-500">
@@ -92,7 +92,7 @@ export const Login = () => {
                   value={formData.password}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  className="pr-10 bg-zinc-950/60 border-zinc-800 text-zinc-200 focus-visible:ring-emerald-500"
+                  className="pr-10 bg-zinc-950/60 border-zinc-800 text-zinc-200 focus-visible:ring-emerald-500 dark:text-zinc-900"
                 />
                 <button
                   type="button"
@@ -121,7 +121,7 @@ export const Login = () => {
               )}
             </Button>
 
-            <p className="text-sm text-center text-zinc-500 w-full">
+            <p className="text-sm text-center text-zinc-500 w-full dark:bg-zinc-900 dark:text-zinc-50">
               Dont have an account?{' '}
               <Link to="/register" className='font-semibold text-emerald-500 hover:text-emerald-400 hover:underline transition-colors'>
               Sign up

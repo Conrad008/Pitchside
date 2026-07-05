@@ -2,13 +2,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-50 text-zinc-600 border-t border-zinc-200 font-sans antialiased">
+    <footer className="bg-zinc-50 text-zinc-600 border-t border-zinc-200 font-sans antialiased dark:bg-zinc-900 dark:text-zinc-100">
       <div className="mx-auto max-w-5xl px-4 py-12">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           
-          {/* Brand Column */}
-          <div className="space-y-4 xl:col-span-1">
-            <span className="text-xl font-black uppercase tracking-wider text-zinc-900">
+          <div className="space-y-4 xl:col-span-1 ">
+            <span className="text-xl font-black uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
               Pitchside<span className="text-emerald-600">.</span>
             </span>
             <p className="text-sm text-zinc-500 max-w-sm leading-relaxed">
@@ -16,7 +15,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Links Columns */}
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2 sm:grid-cols-3">
             <div>
               <h3 className="text-xs font-black uppercase tracking-widest text-zinc-400">
@@ -54,7 +52,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-zinc-200 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="text-xs text-zinc-400 order-2 md:order-1 font-medium">
             &copy; 2026 Pitchside. All rights reserved. Delivering authentic gear across Nairobi.

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import ProductsSearch from './productsSearch';
+import ProductSearch from '@/components/ProductSearch';
 import ProductCard from './productCard';
 
 function ProductsList() {
@@ -53,10 +53,10 @@ function ProductsList() {
   }
 
   return (
-    <div className='bg-zinc-50 min-h-screen flex flex-col justify-between'>
+    <div className='bg-zinc-50 min-h-screen flex flex-col justify-between dark:bg-zinc-900 dark:text-zinc-50'>
         <div className='container mx-auto px-4 py-8 max-w-7xl flex-1'>
             <div className='mb-8 text-center sm:text-left'>
-                <h2 className="text-3xl font-black tracking-tight text-zinc-900 uppercase">
+                <h2 className="text-3xl font-black tracking-tight text-zinc-900 uppercase dark:text-zinc-50">
                     Matchday <span className="text-emerald-600">Gear</span>
                 </h2>
 
@@ -66,19 +66,19 @@ function ProductsList() {
 
             </div>
 
-            <div className='mb-6 bg-white p-4 rounded-xl border border-zinc-200 shadow-sm'>
-                <ProductsSearch onSearch={handleSearch} />
+            <div className='mb-6 bg-white p-4 rounded-xl border border-zinc-200 shadow-sm dark:bg-zinc-900 dark:text-zinc-50 dark:border-none'>
+                <ProductSearch onSearch={handleSearch} />
                 <p className="text-xs text-zinc-500 mt-3 flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                    <span className="h-2 w-2 rounded-full bg-emerald-500  dark:text-zinc-50" />
                     Showing results for:{' '}
-                    <strong className="text-zinc-800 font-semibold">
+                    <strong className="text-zinc-800 font-semibold dark:text-zinc-50">
                         {searchTerm ? `"${searchTerm}"` : 'all items'}
                     </strong>
                 </p>
             </div>
 
             {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
             {filteredProducts.map((product) => (
               <ProductCard
                 key={product.id}
@@ -92,7 +92,7 @@ function ProductsList() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 bg-white rounded-xl border border-zinc-200 max-w-lg mx-auto mt-8">
+          <div className="text-center py-16 bg-white rounded-xl border border-zinc-200 max-w-lg mx-auto mt-8 dark:bg-zinc-900 dark:text-zinc-50">
             <p className="text-zinc-400 font-medium">No jerseys or boots found matching "{searchTerm}"</p>
             <p className="text-xs text-zinc-400 mt-1">Double check your spelling or try another pitch search phrase.</p>
           </div>

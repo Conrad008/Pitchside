@@ -32,7 +32,7 @@ function ProductSearch({ onSearch }) {
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Search for match jerseys or boots..."
-          className="w-full pl-10 pr-10 py-5 bg-zinc-50 border-zinc-200 text-zinc-900 focus-visible:ring-emerald-600 rounded-lg text-sm placeholder:text-zinc-400"
+          className="w-full pl-10 pr-10 py-5 bg-zinc-50 border-zinc-200 text-zinc-900 focus-visible:ring-emerald-600 rounded-lg text-sm placeholder:text-zinc-400  dark:text-zinc-50"
         />
 
         {inputValue && (
