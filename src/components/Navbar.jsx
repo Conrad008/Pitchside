@@ -8,7 +8,7 @@ import { CartContext } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
 import Cart from '@/components/Cart';
 
-export default function Navbar() {
+export default function NavBar() {
   const { cart } = useContext(CartContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { user, isAuthenticated,  logout } = useAuth();
