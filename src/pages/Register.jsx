@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Eye, EyeOff, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Register = () => {
   const { register } = useAuth();
@@ -151,9 +151,9 @@ export const Register = () => {
             
             <p className="text-sm text-center text-zinc-500 w-full">
               Already have an account?{' '}
-              <a href="#Login" className="font-semibold text-emerald-600 hover:text-emerald-700 hover:underline transition-colors">
-                Sign in
-              </a>
+              <Link to="/login" className='font-semibold text-emerald-500 hover:text-emerald-400 hover:underline transition-colors'>
+              Sign in
+              </Link>
             </p>
           </CardFooter>
         </form>

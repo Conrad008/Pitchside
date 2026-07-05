@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Eye, EyeOff, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Login = () => {
   const { login } = useAuth();
@@ -120,13 +120,14 @@ export const Login = () => {
                 'Sign In'
               )}
             </Button>
-            
+
             <p className="text-sm text-center text-zinc-500 w-full">
-              Don&apos;t have an account?{' '}
-              <a href="#register" className="font-semibold text-emerald-500 hover:text-emerald-400 hover:underline transition-colors">
-                Sign up
-              </a>
+              Dont have an account?{' '}
+              <Link to="/register" className='font-semibold text-emerald-500 hover:text-emerald-400 hover:underline transition-colors'>
+              Sign up
+              </Link>
             </p>
+
           </CardFooter>
         </form>
       </Card>
