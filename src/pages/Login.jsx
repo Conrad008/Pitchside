@@ -40,7 +40,7 @@ export const Login = () => {
   };
 
   return (
-    <div className="flex min-h-[85vh] items-center justify-center bg-zinc-950 p-4 sm:p-6 lg:p-8">
+    <div className="flex min-h-[85vh] items-center justify-center bg-zinc-50 p-4 sm:p-6 lg:p-8">
       <Card className="w-full max-w-md border-zinc-200 bg-white shadow-xl shadow-zinc-200/50">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-black tracking-tight text-center text-zinc-100 uppercase">
