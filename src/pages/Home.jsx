@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { ShoppingCart, Star } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 const testimonialsData = [
   { id: 1, name: 'Brian O.', role: 'Winger', text: 'The delivery to Kilimani was incredibly fast. The Vapor Elite boots feel absolute class on the pitch.' },
@@ -9,7 +8,7 @@ const testimonialsData = [
 ];
 
 export const Home = () => {
-    const [cartCount, setCartCount] = useState(0);
+    const [cartCount] = useState(0);
 
     return (
         <div className='min-h-screen bg-zinc-50 text-zinc-900 font-sans antialiased'>
