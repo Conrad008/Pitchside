@@ -18,11 +18,20 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 flex justify-between items-center p-4 text-foreground">
+      <div className='flex items-center gap-6'>
+        <Link to="/" className="text-xl font-black tracking-tight hover:opacity-90 transition-opacity text-emerald-600 uppercase">
+           Pitchside<span className="text-foreground font-bold lowercase">.</span>
+        </Link>
 
-      <Link to="/" className="text-xl font-black tracking-tight hover:opacity-90 transition-opacity text-emerald-600 uppercase">
-        Pitchside<span className="text-foreground font-bold lowercase">.</span>
-      </Link>
-    
+        <Link 
+          to="/products" 
+          className="text-sm font-semibold text-muted-foreground hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors uppercase tracking-wider"
+        >
+          Locker Room
+        </Link>
+
+      </div>
+
       <div className="flex items-center gap-4">
 
         <Button variant="ghost" size="icon" onClick={toggleTheme} className="h-9 w-9">
