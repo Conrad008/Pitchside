@@ -139,3 +139,5 @@ function Cart({ onCheckout }) {
         </div>
     )
 }
+
+export default Cart
