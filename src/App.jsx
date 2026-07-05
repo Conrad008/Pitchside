@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {Login} from '@/pages/login'
-import { Register } from "@/pages/register"
+import {Login} from '@/pages/Login'
+import { Register } from "@/pages/Register"
 import Navbar from "@/components/NavBar"
 import ProductsList from "@/components/ProductList"
 import Checkout from "@/components/Checkout"
