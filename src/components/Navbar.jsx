@@ -8,7 +8,7 @@ import { CartContext } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
 import Cart from '@/components/Cart';
 
-export default function NavBar() {
+export default function Navbar() {
   const { cart } = useContext(CartContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { user, isAuthenticated,  logout } = useAuth();
@@ -42,7 +42,7 @@ export default function NavBar() {
 
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
-            <Button variant="ghost" size="icon" className="relative h-9 w-9 border bg-secondary/50 hover:text-emerald-600">
+            <Button variant="ghost" size="icon" className="relative h-9 w-9  bg-secondary/50 hover:text-emerald-600">
               <ShoppingCart className="h-4 w-4 text-foreground" />
               {cartItemCount > 0 && (
                 <span className="absolute -top-1.5 -right-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-emerald-600 px-1 text-[10px] font-bold text-white animate-in fade-in zoom-in-95 duration-200">
